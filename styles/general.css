@@ -7,7 +7,13 @@
   src: url("../fonts/Saira_SemiCondensed-Light.ttf");
   font-weight: 300;
 }
-
+		@font-face {
+			font-family: 'Saira-Condensed';
+			src: url('https://assets.codepen.io/274456/Saira_Condensed-Bold.ttf');
+			font-weight: 700;
+			font-style: normal;
+			font-display: fallback;
+		}
 
 
 
@@ -134,7 +140,7 @@ main > ul > li {
 	background-color:var(--tmplt-color-blokje-background);
 }
 
-.index1{
+.blokje1{
 	padding:1em;
 	overflow:auto;
 	h2 {
@@ -157,4 +163,76 @@ main > ul > li {
 	}  
   }
 
+.blokje2{
+	/* custom properties voor tweede blokje */
+	/* zelf verder aanvullen */
+	--color:hsl(0 0% 100%);
+	--background:rgb(0 24 54);
+	--shadow:Cyan;
   
+	
+	/* met onderstaande regels staat de tekst in het midden */
+	/* en elk woord op een nieuwe regel */
+	/* hoef je nu nog niet te snappen - mag wel ;-) */
+	display:grid;
+	grid-auto-columns:min-content;  
+	place-content: center;
+	text-align:center;
+	
+	background-color:var(--background);
+	h2 {
+		margin:0;
+		/* jouw code hier */
+		
+		font-family: 'Montserrat', sans-serif;
+		font-size:3em;
+		/* 100 staat voor heel dun - 900 voor heel vet */
+		font-weight:100;
+		/* om de regels wat compacter op elkaar te zetten */
+		line-height:.9em;
+		/* alles in hoofdletters */
+		text-transform:uppercase;
+		color:var(--color);
+		
+		/* een enkele text-shadow is vaak al OK */
+		text-shadow:0 0 0.25em var(--shadow);
+		
+		/* maar mutiple text-shadows geven een toffer effect */
+		text-shadow:
+		  0 0 0.1em var(--shadow),
+		  0 0 0.2em var(--shadow),
+		  0 0 0.3em var(--shadow) /* geen komma na de laatste */
+		  ;
+	  }
+}
+
+.blokje3{
+		--color:white;
+		--background:rgb(230 127 138);
+		--shadow:rgb(0 0 0 / .75);
+		
+		/* tekst weer in het midden */
+		/* en woorden op eigen regel */
+		display:grid;
+		grid-auto-columns:min-content;
+		place-content:center;
+		text-align:center;
+		
+		/* roze als achtergrondkleur */
+		background-color:var(--background);
+		h2 {
+			margin:0;
+			/* https://css-tricks.com/almanac/properties/t/transform/ */
+			transform: skewY(-10deg);
+			
+			/* vergeet de quotes niet - nodig door de spaties*/
+			font-family:'Saira-Condensed';
+			font-size:3.5em;
+			line-height:1em;
+			/* om de letters wat verder uit elkaar te zetten */
+			letter-spacing:.1em;
+			text-transform:uppercase;
+			color:var(--color);
+			text-shadow:.1em .1em 0 var(--shadow);
+		  }
+}
