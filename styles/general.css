@@ -1,3 +1,4 @@
+
 /************************/
 /* SAIRA SEMI-CONDENSED */
 /************************/
@@ -132,3 +133,28 @@ main > ul > li {
   color:var(--tmplt-color-blokje);
 	background-color:var(--tmplt-color-blokje-background);
 }
+
+.index1{
+	padding:1em;
+	overflow:auto;
+	h2 {
+		/* jouw code hier */
+		
+		font-family: 'Expletus Sans', sans-serif;
+		font-size:2em;
+	}
+	p {
+		/* jouw code hier */
+		
+		font-family: 'Expletus Sans', sans-serif;
+		line-height:1.5em;
+	}
+	p::first-letter {
+		/* jouw code hier */
+		
+		font-size:2em;
+		font-weight:bold;  
+	}  
+  }
+
+  
